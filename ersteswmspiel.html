@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Deutschland Auftaktspiel 2026</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    :root {
+      --text: #ffffff;
+      --muted: rgba(255,255,255,0.82);
+      --card-bg: rgba(10, 10, 10, 0.68);
+      --border: rgba(255,255,255,0.12);
+
+      --gold: #facc15;
+      --red: #dc2626;
+
+      --shadow: 0 20px 45px rgba(0,0,0,0.35);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+
+      background:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.72)),
+        url("wm-bg.png") center center / cover no-repeat fixed;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      text-align: center;
+      padding: 90px 20px 50px;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-bottom: 18px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: rgba(250,204,21,0.12);
+      border: 1px solid rgba(250,204,21,0.35);
+      color: #ffe27a;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      backdrop-filter: blur(8px);
+    }
+
+    header h1 {
+      font-size: clamp(2.8rem, 7vw, 5rem);
+      line-height: 1.05;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      text-shadow: 0 8px 30px rgba(0,0,0,0.45);
+    }
+
+    header p {
+      max-width: 760px;
+      margin: 0 auto;
+      font-size: 1.12rem;
+      color: var(--muted);
+      text-shadow: 0 4px 18px rgba(0,0,0,0.4);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px 20px 60px;
+    }
+
+    .hero-card {
+      max-width: 760px;
+      margin: 0 auto 30px;
+      background: rgba(0,0,0,0.62);
+      border: 1px solid var(--border);
+      border-radius: 26px;
+      padding: 34px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-card p {
+      color: var(--muted);
+      margin-bottom: 24px;
+      font-size: 1.05rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 16px 32px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: white;
+
+      background:
+        linear-gradient(135deg, #111111, #dc2626);
+
+      box-shadow: 0 16px 32px rgba(0,0,0,0.35);
+
+      transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 22px 40px rgba(0,0,0,0.42);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+
+    .card h2 {
+      margin-bottom: 14px;
+      font-size: 1.2rem;
+      color: #ffe27a;
+    }
+
+    .label {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.68);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .value {
+      font-size: 1.08rem;
+      font-weight: 700;
+    }
+
+    .card p,
+    .card li {
+      color: var(--muted);
+    }
+
+    .card ul {
+      padding-left: 18px;
+      margin-top: 10px;
+    }
+
+    .card li + li {
+      margin-top: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 28px 12px 34px;
+      color: rgba(255,255,255,0.72);
+      font-size: 0.9rem;
+      text-shadow: 0 3px 12px rgba(0,0,0,0.35);
+    }
+
+    footer a {
+      color: rgba(255,255,255,0.82);
+      text-decoration: none;
+      margin: 0 6px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+      color: white;
+    }
+
+    @media (max-width: 900px) {
+
+      body {
+        background:
+          linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.78)),
+          url("wm-bg.png") center center / cover no-repeat;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        padding: 70px 20px 40px;
+      }
+
+      .hero-card,
+      .card {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="page">
+
+  <header>
+    <div class="badge">WM 2026</div>
+
+    <h1>Deutschland Auftaktspiel 🇩🇪</h1>
+
+    <p>
+      Ich wollte gerne das erste WM Spiel von Deutschland gemeinsam schauen —
+      Fußball, Grillen, Getränke und hoffentlich gutes Wetter.
+    </p>
+  </header>
+
+  <main class="container">
+
+    <section class="hero-card">
+
+      <p>
+        Entspannt zusammen Fußball schauen,
+        mitfiebern und den WM-Start gemeinsam erleben.
+      </p>
+
+      <a class="button"
+         href="https://forms.gle/DEIN_LINK_HIER"
+         target="_blank"
+         rel="noopener">
+
+        Jetzt anmelden
+
+      </a>
+
+    </section>
+
+    <section class="grid">
+
+      <div class="card">
+        <h2>Spielinfos</h2>
+
+        <span class="label">Datum</span>
+        <div class="value">14.06.2026</div>
+
+        <br>
+
+        <span class="label">Essen</span>
+        <div class="value">18:00 Uhr</div>
+
+        <br>
+        <br>
+
+        <span class="label">Anpfiff</span>
+        <div class="value">19:00 Uhr</div>
+
+        <br>
+
+        <span class="label">Ort</span>
+        <div class="value">Hamberge</div>
+      </div>
+
+      <div class="card">
+        <h2>Was dich erwartet</h2>
+
+        <ul>
+          <li>Deutschlands erstes WM Spiel</li>
+          <li>Grillen & kalte Getränke</li>
+          <li>Pool steht auch bereit</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Hinweis</h2>
+
+        <p>
+          Die Anmeldung dient nur der Planung
+          von Getränken und Snacks.
+          Essen und Getränke berechne ich erstmal mit 15€.
+          Deine Daten werden ausschließlich
+          für dieses Event verwendet.
+        </p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <a href="/impressum.html">Impressum</a> ·
+    <a href="/datenschutz.html">Datenschutz</a>
+  </footer>
+
+</div>
+
+</body>
+</html>
