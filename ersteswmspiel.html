@@ -126,11 +126,12 @@
       box-shadow: 0 22px 40px rgba(0,0,0,0.42);
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 420px));
+  justify-content: center;
+  gap: 24px;
+}
 
     .card {
       background: var(--card-bg);
